@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input id="primeiroNumero" type="number" />
+    <input id="segundoNumero" type="number" />
+    <button id="btnSoma">
+        Somar
+    </button>
+    <button id="btnSubtrai">
+        Subtrair
+    </button>
+    <button id="btnMultiplica">
+        Multiplicar
+    </button>
+    <button id="btnDividir">
+        Dividir
+    </button>
+</body>
+<script>
+    const inputPrimeiroNumero = document.getElementById('primeiroNumero');
+    const inputSegundoNumero = document.getElementById('segundoNumero');
+    const buttonDeSomar = document.getElementById('btnSoma');
+    const buttonDeSubtrair = document.getElementById('btnSubtrai');
+    const buttonDeMultiplica = document.getElementById('btnMultiplica');
+    const buttonDeDividir = document.getElementById('btnDividir');
+
+    buttonDeSomar.addEventListener('click', () => {
+        const primeiroNumero = Number(inputPrimeiroNumero.value);
+        const segundoNumero = Number(inputSegundoNumero.value);
+        if (primeiroNumero == '' || segundoNumero == '') {
+            console.log('Campo vazio!')
+        }
+        else {
+            console.log(primeiroNumero + segundoNumero);
+        }
+    })
+
+    buttonDeSubtrair.addEventListener('click', () => {
+        const primeiroNumero = Number(inputPrimeiroNumero.value);
+        const segundoNumero = Number(inputSegundoNumero.value);
+        if (primeiroNumero == '' || segundoNumero == '') {
+            console.log('capos vazios, nao pode calcular!')
+        } else {
+            console.log(primeiroNumero - segundoNumero);
+        }
+    })
+
+    buttonDeMultiplica.addEventListener('click', () => {
+        const primeiroNumero = Number(inputPrimeiroNumero.value);
+        const segundoNumero = Number(inputSegundoNumero.value);
+        if (primeiroNumero == '' || segundoNumero == '') {
+            console.log('nao pode por campo vazio!')
+        } else {
+            console.log(primeiroNumero * segundoNumero);
+        }
+    })
+
+    buttonDeDividir.addEventListener('click', () => {
+        const primeiroNumero = Number(inputPrimeiroNumero.value);
+        const segundoNumero = Number(inputSegundoNumero.value);
+        if (segundoNumero == 0) {
+            console.log('por zero nao pai!')
+        } else {
+            console.log(primeiroNumero / segundoNumero);
+        }
+    })
+
+
+
+
+</script>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form id="myForm">
+        <input type="text" name="nome" placeholder="Digite seu nome">
+        <input type="text" name="país" placeholder="Digite seu país">
+        <input type="text" name="idade" placeholder="Digite sua idade">
+        <input type="text" name="telefone" placeholder="Digite seu telefone">
+        <input type="text" name="email" placeholder="Digite seu email">
+        <button type="submit">Enviar!</button>
+    </form>
+
+    <script>
+        document.getElementById('myForm').addEventListener('submit', function(event) {
+            event.preventDefault(); 
+
+            const formData = new FormData(this); 
+            const data = {};
+
+
+            formData.forEach((value, key) => {
+                data[key] = value;
+            });
+
+
+            const jsonData = JSON.stringify(data);
+
+            console.log(jsonData); 
+            alert('Dados enviados para o console!'); 
+        });
+    </script>
+</body>
+</html>
